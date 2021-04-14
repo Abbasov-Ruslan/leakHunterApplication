@@ -8,10 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var searchPasswordTextField: UITextField!
+    
+    var apiPasswordManger = APIPasswordManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+    }
+
+    
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        let password = searchPasswordTextField.text ?? ""
+        var response = apiPasswordManger.passwordRequest(password: password)
+        print(response)
     }
 
 

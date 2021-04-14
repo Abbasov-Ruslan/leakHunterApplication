@@ -13,6 +13,7 @@
 		53E428C02624536F00535118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E428BE2624536F00535118 /* Main.storyboard */; };
 		53E428C22624537200535118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E428C12624537200535118 /* Assets.xcassets */; };
 		53E428C52624537200535118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E428C32624537200535118 /* LaunchScreen.storyboard */; };
+		53E428CE2625709F00535118 /* APIPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428CD2625709F00535118 /* APIPasswordManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		53E428C12624537200535118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E428C42624537200535118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53E428C62624537200535118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53E428CD2625709F00535118 /* APIPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPasswordManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		53E428B72624536F00535118 /* leakedPasswordInterface */ = {
 			isa = PBXGroup;
 			children = (
+				53E428CD2625709F00535118 /* APIPasswordManager.swift */,
 				53E428B82624536F00535118 /* AppDelegate.swift */,
 				53E428BA2624536F00535118 /* SceneDelegate.swift */,
 				53E428BC2624536F00535118 /* ViewController.swift */,
@@ -140,6 +143,7 @@
 				53E428BD2624536F00535118 /* ViewController.swift in Sources */,
 				53E428B92624536F00535118 /* AppDelegate.swift in Sources */,
 				53E428BB2624536F00535118 /* SceneDelegate.swift in Sources */,
+				53E428CE2625709F00535118 /* APIPasswordManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

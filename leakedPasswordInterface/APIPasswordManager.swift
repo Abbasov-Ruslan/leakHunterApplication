@@ -31,56 +31,108 @@ class APIPasswordManager {
         return "https://api.pwnedpasswords.com/range/\(hash)"
     }
     
-    func passwordRequest(password: String) {
-        let cryptoPassword = password.sha1()
-        let cryptoPasswordShort = String(cryptoPassword.prefix(5))
-        let urlString = path(hash: cryptoPasswordShort)
-        let url = URL(string: urlString)!
-        var arr2: [String] = []
-        var i = 0
-        var crptoPassShort = cryptoPassword.uppercased()
-        
-        
+    typealias CompletionHandler = (_ success:String) -> Void
+    
+    func removeFiveCharsFromBeginnig(str: String) -> String {
+        var tempStr = str
         for _ in 1...5 {
-            crptoPassShort.remove(at: crptoPassShort.startIndex)
+            tempStr.remove(at: tempStr.startIndex)
         }
+        return tempStr
+    }
+    
+    //    func getAPIData(url: URL, completionHandler: @escaping CompletionHandler) {
+    //        var str = ""
+    //        var request = URLRequest(url: url)
+    //        request.httpMethod = "GET"
+    //        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
+    //            guard let data = data else { return }
+    //            str = String(data: data, encoding: .utf8)!
+    //
+    //            completionHandler(str)
+    //        }
+    //    }
+    
+    func fetchPassword(url: URL, completionHandler: @escaping (String) -> Void) {
         
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            let str = String(data: data, encoding: .utf8)!
-            _ = str.contains(cryptoPassword)
-            
-            let array = str.components(separatedBy: "\n")
-            
-            for item in array {
-                arr2.append(contentsOf: item.components(separatedBy: ":"))
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            var str = ""
+            if let error = error {
+                print("Error with fetching films: \(error)")
+                return
             }
             
-            var bool = arr2[1052].contains(crptoPassShort)
-            
-            for item in arr2 {
-                if item.contains(crptoPassShort) {
-                    print(arr2[i+1])
-                    print("hello")
-                }
-                i+=1
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                print("Error with the response, unexpected status code: \(String(describing: response))")
+                return
             }
-            //            print(i)
-            //            print(arr2[659])
-            //            print(String(data: data, encoding: .utf8)!)
-        }
+            str = String(data: data!, encoding: .utf8)!
+            completionHandler(str)
+        })
         task.resume()
     }
     
+    func passwordRequest(password: String, completionHandler: @escaping CompletionHandler) {
+        let cryptoPassword = password.sha1()
+        let firstFiveHash = String(cryptoPassword.prefix(5))
+        let urlString = path(hash: firstFiveHash)
+        let url = URL(string: urlString)!
+        var hashNumberArray: [String] = []
+        var i = 0
+        var crptoPassShort = cryptoPassword.uppercased()
+        var result = ""
+        var str = ""
+        var testString = ""
+        
+        
+        
+        
+        
+        //        var request = URLRequest(url: url)
+        //        request.httpMethod = "GET"
+        //        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
+        //            guard let data = data else { return }
+        //            str = String(data: data, encoding: .utf8)!
+        //
+        //            completionHandler(str)
+        //        }
+        
+        
+        //        getAPIData(url: url, completionHandler: { (string) -> Void in
+        //            str = string
+        //        })
+        
+        fetchPassword(url: url) { (testString) in
+            str = testString
+            for _ in 1...5 {
+                crptoPassShort.remove(at: crptoPassShort.startIndex)
+            }
+            
+            let separatedStringArray = str.components(separatedBy: "\n")
+            
+            for item in separatedStringArray {
+                hashNumberArray.append(contentsOf: item.components(separatedBy: ":"))
+            }
+            
+            for item in hashNumberArray {
+                if item.contains(crptoPassShort) {
+                    result = hashNumberArray[i+1]
+                }
+                i+=1
+            }
+            completionHandler(result)
+        }
+    }
     
     
-    
-    
-//    func isPasswordPawn(password:String) -> Int? {
-//        let cryptoPassword = password.sha1()
-//
-//    }
 }
+
+
+
+
+
+
 
 
 

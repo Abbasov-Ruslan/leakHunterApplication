@@ -27,7 +27,7 @@ extension String {
 class APIPasswordManager {
     
     
-    func path(hash: String) -> String {
+    private func path(hash: String) -> String {
         return "https://api.pwnedpasswords.com/range/\(hash)"
     }
     
@@ -41,19 +41,7 @@ class APIPasswordManager {
         return tempStr
     }
     
-    //    func getAPIData(url: URL, completionHandler: @escaping CompletionHandler) {
-    //        var str = ""
-    //        var request = URLRequest(url: url)
-    //        request.httpMethod = "GET"
-    //        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
-    //            guard let data = data else { return }
-    //            str = String(data: data, encoding: .utf8)!
-    //
-    //            completionHandler(str)
-    //        }
-    //    }
-    
-    func fetchPassword(url: URL, completionHandler: @escaping (String) -> Void) {
+    private func fetchPassword(url: URL, completionHandler: @escaping (String) -> Void) {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             var str = ""
@@ -73,6 +61,8 @@ class APIPasswordManager {
         task.resume()
     }
     
+    
+    
     func passwordRequest(password: String, completionHandler: @escaping CompletionHandler) {
         let cryptoPassword = password.sha1()
         let firstFiveHash = String(cryptoPassword.prefix(5))
@@ -83,25 +73,7 @@ class APIPasswordManager {
         var crptoPassShort = cryptoPassword.uppercased()
         var result = ""
         var str = ""
-        var testString = ""
         
-        
-        
-        
-        
-        //        var request = URLRequest(url: url)
-        //        request.httpMethod = "GET"
-        //        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
-        //            guard let data = data else { return }
-        //            str = String(data: data, encoding: .utf8)!
-        //
-        //            completionHandler(str)
-        //        }
-        
-        
-        //        getAPIData(url: url, completionHandler: { (string) -> Void in
-        //            str = string
-        //        })
         
         fetchPassword(url: url) { (testString) in
             str = testString

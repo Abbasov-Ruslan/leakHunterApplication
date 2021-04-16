@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5330E12826297532009C551E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330E12726297532009C551E /* NewsTableViewController.swift */; };
+		5330E12C26299A56009C551E /* APINewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330E12B26299A56009C551E /* APINewsManager.swift */; };
+		5330E13126299C37009C551E /* newsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330E13026299C37009C551E /* newsModel.swift */; };
 		53E428B92624536F00535118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428B82624536F00535118 /* AppDelegate.swift */; };
 		53E428BB2624536F00535118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428BA2624536F00535118 /* SceneDelegate.swift */; };
 		53E428BD2624536F00535118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428BC2624536F00535118 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		5330E12726297532009C551E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		5330E12B26299A56009C551E /* APINewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINewsManager.swift; sourceTree = "<group>"; };
+		5330E13026299C37009C551E /* newsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsModel.swift; sourceTree = "<group>"; };
 		53E428B52624536F00535118 /* leakedPasswordInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leakedPasswordInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E428B82624536F00535118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E428BA2624536F00535118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5330E12F26299C12009C551E /* News model */ = {
+			isa = PBXGroup;
+			children = (
+				5330E13026299C37009C551E /* newsModel.swift */,
+			);
+			path = "News model";
+			sourceTree = "<group>";
+		};
 		53E428AC2624536F00535118 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +72,10 @@
 		53E428B72624536F00535118 /* leakedPasswordInterface */ = {
 			isa = PBXGroup;
 			children = (
-				53E428CD2625709F00535118 /* APIPasswordManager.swift */,
+				5330E12F26299C12009C551E /* News model */,
 				53E428B82624536F00535118 /* AppDelegate.swift */,
+				53E428CD2625709F00535118 /* APIPasswordManager.swift */,
+				5330E12B26299A56009C551E /* APINewsManager.swift */,
 				53E428BA2624536F00535118 /* SceneDelegate.swift */,
 				53E428BC2624536F00535118 /* ViewController.swift */,
 				5330E12726297532009C551E /* NewsTableViewController.swift */,
@@ -144,10 +158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E428BD2624536F00535118 /* ViewController.swift in Sources */,
+				5330E13126299C37009C551E /* newsModel.swift in Sources */,
 				53E428B92624536F00535118 /* AppDelegate.swift in Sources */,
 				53E428BB2624536F00535118 /* SceneDelegate.swift in Sources */,
 				5330E12826297532009C551E /* NewsTableViewController.swift in Sources */,
 				53E428CE2625709F00535118 /* APIPasswordManager.swift in Sources */,
+				5330E12C26299A56009C551E /* APINewsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchButton: UIButton!
     var apiPasswordManger = APIPasswordManager()
+    var apiNewsManager = ApiNewsManager()
     
     
     override func viewDidLoad() {
@@ -35,11 +36,10 @@ class ViewController: UIViewController {
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         
-        
-        
         let password = searchPasswordTextField.text ?? ""
-        
         var response = ""
+        apiNewsManager.getNewsJson()
+        
         apiPasswordManger.passwordRequest(password: password){ [weak self] (string) in
             response = string
             print(response)

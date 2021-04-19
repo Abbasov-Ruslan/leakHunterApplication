@@ -17,7 +17,7 @@ struct NewsModel {
     let name: String
     let title: String
     let domain: String
-    let newsIcon: UIImage
+//    let newsIcon: UIImage
     let breachDate: String
     let pwnCount: Int
     let description: String
@@ -28,7 +28,7 @@ struct NewsModel {
     let isRetired: Bool
     let isSpamList: Bool
 }
-
+//
 extension NewsModel: JSONDecodable {
   init?(JSON: [String : AnyObject]) {
     guard let name = JSON["Name"] as? String,
@@ -43,16 +43,14 @@ extension NewsModel: JSONDecodable {
     let isFabricated = JSON["IsFabricated"] as? Bool,
     let isSensitive = JSON["IsSensitive"] as? Bool,
     let isRetired = JSON["IsRetired"] as? Bool,
-    let isSpamList = JSON["IsSpamList"] as? Bool
-    
-    else {
+    let isSpamList = JSON["IsSpamList"] as? Bool else {
         return nil
     }
-    
+
     self.name = name
     self.title = title
     self.domain = domain
-//    self.newsIcon = newsIconPath
+//    self.newsIcon = UIImage(systemName: "paperplane.fill")
     self.breachDate = breachDate
     self.pwnCount = pwnCount
     self.description = description
@@ -62,8 +60,6 @@ extension NewsModel: JSONDecodable {
     self.isSensitive = isSensitive
     self.isRetired = isRetired
     self.isSpamList = isSpamList
-    
-    
   }
 }
 

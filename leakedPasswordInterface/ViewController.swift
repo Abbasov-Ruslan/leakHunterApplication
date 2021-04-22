@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchButton: UIButton!
     var apiPasswordManger = APIPasswordManager()
-    var apiNewsManager = ApiNewsManager()
     
     
     override func viewDidLoad() {
@@ -38,7 +37,7 @@ class ViewController: UIViewController {
         
         let password = searchPasswordTextField.text ?? ""
         var response = ""
-        apiNewsManager.getNewsJson()
+
         
         apiPasswordManger.passwordRequest(password: password){ [weak self] (string) in
             response = string
@@ -46,7 +45,6 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 if response == "" {
                     let alert = UIAlertController(title: "Good", message: "It's ok your pasword is not pawned", preferredStyle: UIAlertController.Style.alert)
-                    
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self?.present(alert, animated: true, completion: nil)
                 } else {

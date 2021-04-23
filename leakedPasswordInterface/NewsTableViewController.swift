@@ -88,10 +88,10 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indexPath = tableView.indexPath(for: sender as! UITableViewCell)!
-        let leakVC = segue.destination as! LeakDetailsViewController
+//        let indexPath = tableView.indexPath(for: sender as! UITableViewCell)!
+//        let leakVC = segue.destination as! LeakDetailsViewController
         
-        leakVC.leakDetails = secondArray[indexPath.row]
+//        leakVC.leakDetails = secondArray[indexPath.row]
     }
     
 }

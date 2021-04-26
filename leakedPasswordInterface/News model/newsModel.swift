@@ -30,7 +30,7 @@ struct NewsModel {
     let logoPath: String
     let modifiedDate:String
     var image: UIImage?
-    var sortDate: Date?
+//    var sortDate: Date?
 }
 //
 extension NewsModel: JSONDecodable {
@@ -69,7 +69,7 @@ extension NewsModel: JSONDecodable {
         self.isSpamList = isSpamList
         self.logoPath = logoPath
         self.image = nil
-        self.sortDate = nil
+//        self.sortDate = nil
     }
 }
 

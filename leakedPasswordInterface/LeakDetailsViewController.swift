@@ -27,27 +27,38 @@ class LeakDetailsViewController: UIViewController {
     @IBOutlet weak var leakDescriptionTextView: UITextView!
     
     
-    var leakDetails:NewsModel = NewsModel(name: "", title: "", domain: "", breachDate: "", pwnCount: 0, description: "", dataClasses: [], isVerified: false, isFabricated: false, isSensitive: false, isRetired: false, isSpamList: false, addedDate: "", logoPath: "", modifiedDate: "", image: UIImage(systemName: "key"), sortDate: Date())
+    var leakDetails:NewsModel = NewsModel(name: "", title: "", domain: "", breachDate: "", pwnCount: 0, description: "", dataClasses: [], isVerified: false, isFabricated: false, isSensitive: false, isRetired: false, isSpamList: false, addedDate: "", logoPath: "", modifiedDate: "", image: UIImage(systemName: "key"))
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = leakDetails.name
         breachCountLabel.text = String(leakDetails.pwnCount)
+
+        var str = leakDetails.modifiedDate
+        var str2 = leakDetails.addedDate
+        if let dotRange = str.range(of: "T") {
+          str.removeSubrange(dotRange.lowerBound..<str.endIndex)
+        }
+        if let dotRange = str2.range(of: "T") {
+            str2.removeSubrange(dotRange.lowerBound..<str2.endIndex)
+        }
+        
         breachDateLabel.text = leakDetails.breachDate
-        addedDateLabel.text = leakDetails.addedDate
-        modifiedLabel.text = leakDetails.modifiedDate
+        addedDateLabel.text = str
+        modifiedLabel.text = str2
+        
             
         dataClassesLabel.text = ""
         for item in leakDetails.dataClasses {
             dataClassesLabel.text = dataClassesLabel.text! + item + "\n"
         }
         
-        let str = leakDetails.description.htmlToAttributedString
+        let descriptionStr = leakDetails.description.htmlToAttributedString
         
-        leakDescriptionTextView.attributedText = str
+        leakDescriptionTextView.attributedText = descriptionStr
         
-        leakDescriptionTextView.font = UIFont(name: leakDescriptionTextView.font!.fontName, size: 17)
+        leakDescriptionTextView.font = UIFont.systemFont(ofSize: 17.0)
         leakDescriptionTextView.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         

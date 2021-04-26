@@ -45,7 +45,7 @@ class NewsTableViewController: UITableViewController {
     func sortArray(arr:[NewsModel]) -> [NewsModel] {
         var k = 0
         var arr2:[NewsModel] = []
-        for item in arr {
+        for _ in arr {
             arr2 = arr.sorted {
                 $0.addedDate > $1.addedDate
             }
@@ -88,10 +88,10 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let indexPath = tableView.indexPath(for: sender as! UITableViewCell)!
-//        let leakVC = segue.destination as! LeakDetailsViewController
+        let indexPath = tableView.indexPath(for: sender as! UITableViewCell)!
+        let leakVC = segue.destination as! LeakDetailsViewController
         
-//        leakVC.leakDetails = secondArray[indexPath.row]
+        leakVC.leakDetails = secondArray[indexPath.row]
     }
     
 }

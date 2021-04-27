@@ -17,6 +17,11 @@ class GenerateViewController: UIViewController {
         generateButton.titleLabel?.minimumScaleFactor = 0.5
         generateButton.titleLabel?.numberOfLines = 1
         generateButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        let generator = APIPassGenManager()
+        generator.generatePassword(length: 7, num: true, symbols: true, upper: true) { (_: [newPasswordModel]) in
+        }
+        
     }
     
     override var prefersStatusBarHidden: Bool {

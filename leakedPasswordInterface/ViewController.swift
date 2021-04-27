@@ -29,9 +29,9 @@ class ViewController: UIViewController {
 
     }
     
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         

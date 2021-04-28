@@ -7,14 +7,17 @@
 
 import Foundation
 
+protocol JSONDecodable2 {
+    init?(JSON: [String : AnyObject])
+}
 
 struct newPasswordModel {
     
     let success: Bool
     let password: [String]
 }
-extension newPasswordModel: JSONDecodable {
-    init?(JSON: NSDictionary) {
+extension newPasswordModel: JSONDecodable2 {
+    init?(JSON: [String : AnyObject]) {
         guard let success = JSON["success"] as? Bool,
               let password = JSON["passwords"] as? [String]
         else {

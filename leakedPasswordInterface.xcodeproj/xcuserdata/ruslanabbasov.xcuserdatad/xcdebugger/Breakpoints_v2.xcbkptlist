@@ -360,7 +360,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "262285CF-9C9F-491D-AA93-753665A6FF54"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
@@ -375,24 +375,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A99034FE-2BE6-4D00-9E1D-07B644270C5F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "generatePassword(length:num:symbols:upper:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7209ACF2-8BC5-41C4-B57B-13C564DE8339"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
@@ -408,7 +392,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "768452E8-3F57-48DD-906F-B0F2998F5744"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
@@ -420,11 +404,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "768452E8-3F57-48DD-906F-B0F2998F5744 - cc091d9dd64fc6e3"
+                  uuid = "768452E8-3F57-48DD-906F-B0F2998F5744 - 546bdf1ed06374ba"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "leakedPasswordInterface.APIPassGenManager.generatePassword(length: Swift.Int, num: Swift.Bool, symbols: Swift.Bool, upper: Swift.Bool, completionHandler: (Swift.Array&lt;leakedPasswordInterface.newPasswordModel&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "leakedPasswordInterface.APIPassGenManager.generatePassword(length: Swift.Int, num: Swift.Bool, symbols: Swift.Bool, upper: Swift.Bool, completionHandler: (Swift.String) -&gt; ()) -&gt; ()"
                   moduleName = "leakedPasswordInterface"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruslanabbasov/Library/Autosave%20Information/learnProjects/leakedPasswordInterface/leakedPasswordInterface/APIPassGenMananger.swift"
@@ -435,11 +419,11 @@
                   offsetFromSymbolStart = "319">
                </Location>
                <Location
-                  uuid = "768452E8-3F57-48DD-906F-B0F2998F5744 - 6f5827c9a63164dd"
+                  uuid = "768452E8-3F57-48DD-906F-B0F2998F5744 - 7587128164aa81be"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in leakedPasswordInterface.APIPassGenManager.generatePassword(length: Swift.Int, num: Swift.Bool, symbols: Swift.Bool, upper: Swift.Bool, completionHandler: (Swift.Array&lt;leakedPasswordInterface.newPasswordModel&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in leakedPasswordInterface.APIPassGenManager.generatePassword(length: Swift.Int, num: Swift.Bool, symbols: Swift.Bool, upper: Swift.Bool, completionHandler: (Swift.String) -&gt; ()) -&gt; ()"
                   moduleName = "leakedPasswordInterface"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruslanabbasov/Library/Autosave%20Information/learnProjects/leakedPasswordInterface/leakedPasswordInterface/APIPassGenMananger.swift"
@@ -447,7 +431,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "231">
+                  offsetFromSymbolStart = "257">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -456,16 +440,96 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7C025EAA-37B9-41CB-BE73-E01A6395DED5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getURL(length:num:symbols:upper:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FB210B5-F103-4216-B016-E813D7CFED86"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "getURL(length:num:symbols:upper:)"
-            landmarkType = "9">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "generatePassword(length:num:symbols:upper:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "465B5761-6094-4DF1-8980-A9E4D2C19E15"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "APIPassGenManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17A3A7C9-C14C-490F-AC28-355097A0307B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "generatePassword(length:num:symbols:upper:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E59CE84A-AAD9-409F-91D1-829E1BC83F19"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "leakedPasswordInterface/APIPassGenMananger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "generatePassword(length:num:symbols:upper:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2A5615D-1C79-4565-BADE-458B8E54A6DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "leakedPasswordInterface/GenerateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "capitalisedCheckBoxPressed(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

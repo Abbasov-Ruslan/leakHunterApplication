@@ -16,7 +16,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7pj-R9-HPp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.20776566860000001" green="0.207554549" blue="0.22411766650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.20776566860000001" green="0.207554549" blue="0.22411766650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeakCell" textLabel="Kda-ee-x6J" detailTextLabel="gzf-yf-vzR" imageView="b9j-XG-L3H" rowHeight="100" style="IBUITableViewCellStyleValue1" id="bJG-Nd-gHL">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -328,7 +329,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678912345679" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ZQ-MO-ti5">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="generate new password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ZQ-MO-ti5">
                                 <rect key="frame" x="49.333333333333329" y="412.33333333333331" width="253.33333333333337" height="32.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2ZQ-MO-ti5" secondAttribute="height" multiplier="132:17" id="8p5-gO-B0N"/>
@@ -336,34 +337,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="spr-YT-LLJ">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="5" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="spr-YT-LLJ">
                                 <rect key="frame" x="62.666666666666657" y="509.99999999999994" width="288.66666666666674" height="34.333333333333314"/>
                                 <color key="tintColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="spr-YT-LLJ" secondAttribute="height" multiplier="43:5" id="mHL-jR-9mT"/>
                                 </constraints>
+                                <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
+                                <connections>
+                                    <action selector="sliderValuerChanged:" destination="bS3-LA-0t1" eventType="valueChanged" id="glG-LW-Ysb"/>
+                                </connections>
                             </slider>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-le-ptz">
-                                <rect key="frame" x="321.66666666666669" y="563.33333333333337" width="19.333333333333314" height="124"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-le-ptz">
+                                <rect key="frame" x="319.33333333333331" y="563.33333333333337" width="23.666666666666686" height="129.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9c-5m-edZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="19.333333333333332" height="22.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="23.666666666666668" height="23"/>
                                         <color key="tintColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="square" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="square" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="symbolsCheckboxPressed:" destination="bS3-LA-0t1" eventType="touchUpInside" id="hW9-QV-6LF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhE-8i-WMj">
-                                        <rect key="frame" x="0.0" y="50.666666666666629" width="19.333333333333332" height="22.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="53.000000000000007" width="23.666666666666668" height="23.333333333333336"/>
                                         <color key="tintColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="square" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="square" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="capitalisedCheckBoxPressed:" destination="bS3-LA-0t1" eventType="touchUpInside" id="CY3-bW-99J"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-9P-grC">
-                                        <rect key="frame" x="0.0" y="101.33333333333326" width="19.333333333333332" height="22.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="106.33333333333326" width="23.666666666666668" height="23.333333333333343"/>
                                         <color key="tintColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="square" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="square" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numsCheckboxPressed:" destination="bS3-LA-0t1" eventType="touchUpInside" id="171-bp-wDp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="I6Y-le-ptz" secondAttribute="height" multiplier="19:122" id="ESb-Md-Xaa"/>
+                                    <constraint firstAttribute="width" secondItem="I6Y-le-ptz" secondAttribute="height" multiplier="23:126" id="jat-OX-a4v"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="V8K-cj-LQ1">
@@ -411,8 +431,11 @@
                                 <state key="normal" title="Genereate">
                                     <color key="titleColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="generateNewPasswordPressed:" destination="bS3-LA-0t1" eventType="touchUpInside" id="B4c-a2-32E"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-cY-ZpD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-cY-ZpD">
                                 <rect key="frame" x="265.33333333333331" y="474.66666666666669" width="10.333333333333314" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,12 +472,18 @@
                         <imageReference key="selectedImage" image="key.fill" catalog="system" symbolScale="medium" renderingMode="template"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="capitilisedCheckBox" destination="nhE-8i-WMj" id="5J9-Ox-ZMe"/>
                         <outlet property="generateButton" destination="RWE-3f-2mT" id="ifg-qD-UgT"/>
+                        <outlet property="lengthOfPasswordNumber" destination="Yu7-cY-ZpD" id="fhQ-ME-IVe"/>
+                        <outlet property="lengthOfPasswordSlider" destination="spr-YT-LLJ" id="6mc-6T-rYa"/>
+                        <outlet property="numsCheckBox" destination="fUS-9P-grC" id="KTK-S9-Xbe"/>
+                        <outlet property="passwordTextField" destination="2ZQ-MO-ti5" id="Ldm-Rv-sze"/>
+                        <outlet property="symbolsCheckbox" destination="A9c-5m-edZ" id="w1j-rg-p8w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJM-DV-7QF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2863.125" y="-59.154929577464792"/>
+            <point key="canvasLocation" x="-2863.768115942029" y="-59.598214285714285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pEX-95-okJ">
@@ -573,8 +602,8 @@
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

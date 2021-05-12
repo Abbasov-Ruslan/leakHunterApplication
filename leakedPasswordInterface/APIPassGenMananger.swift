@@ -11,16 +11,16 @@ class APIPassGenManager {
     typealias JSONCompletionHandler = (_ passwordStr: String) -> Void
     
     func generatePassword(length: Int, num: Bool, symbols: Bool, upper: Bool,completionHandler: @escaping JSONCompletionHandler) {
-        let url = getURL(length: 7, num: true, symbols: true, upper: true)
+        let url = getURL(length: length, num: num, symbols: symbols, upper: upper)
         
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
                 
-                if let dictionary = json as? [String: AnyObject] {
+                if let dictionary = json {
                     let one =  newPasswordModel(JSON: dictionary)
-                    var str = one?.password[0]
+                    let str = one?.password[0]
                     completionHandler(str ?? "12345")
                 } else {
                 }

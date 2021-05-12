@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         searchButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
         searchPasswordTextField.layer.cornerRadius = 10.0
-//        searchPasswordTextField.layer.borderWidth = 2.0
         searchPasswordTextField.layer.borderColor = UIColor.black.cgColor
         searchPasswordTextField.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
     }

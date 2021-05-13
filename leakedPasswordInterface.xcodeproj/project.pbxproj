@@ -11,15 +11,17 @@
 		5330E13126299C37009C551E /* newsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330E13026299C37009C551E /* newsModel.swift */; };
 		53440ADA2637E78C00BDB2D6 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53440AD92637E78C00BDB2D6 /* GenerateViewController.swift */; };
 		53440ADF2637F41A00BDB2D6 /* APIPassGenMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */; };
+		53584781264BE84000934FE0 /* PasswordList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5358477F264BE84000934FE0 /* PasswordList.xcdatamodeld */; };
 		536877342637FF22006BDD4B /* newPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536877332637FF22006BDD4B /* newPasswordModel.swift */; };
 		53C37A5126314EE200F993A3 /* LeakDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */; };
+		53CFA20D264D028800C372F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA20C264D028800C372F2 /* ViewController.swift */; };
 		53E428B92624536F00535118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428B82624536F00535118 /* AppDelegate.swift */; };
 		53E428BB2624536F00535118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428BA2624536F00535118 /* SceneDelegate.swift */; };
-		53E428BD2624536F00535118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428BC2624536F00535118 /* ViewController.swift */; };
 		53E428C02624536F00535118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E428BE2624536F00535118 /* Main.storyboard */; };
 		53E428C22624537200535118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E428C12624537200535118 /* Assets.xcassets */; };
 		53E428C52624537200535118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E428C32624537200535118 /* LaunchScreen.storyboard */; };
 		53E428CE2625709F00535118 /* APIPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428CD2625709F00535118 /* APIPasswordManager.swift */; };
+		53E46DC5264BEFB7004CC692 /* PasswordStorageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E46DC4264BEFB7004CC692 /* PasswordStorageTableView.swift */; };
 		53F43338262D7A4600D935E0 /* APIBreachesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F43337262D7A4600D935E0 /* APIBreachesManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,17 +30,19 @@
 		5330E13026299C37009C551E /* newsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsModel.swift; sourceTree = "<group>"; };
 		53440AD92637E78C00BDB2D6 /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
 		53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPassGenMananger.swift; sourceTree = "<group>"; };
+		53584780264BE84000934FE0 /* PasswordList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PasswordList.xcdatamodel; sourceTree = "<group>"; };
 		536877332637FF22006BDD4B /* newPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPasswordModel.swift; sourceTree = "<group>"; };
 		53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakDetailsViewController.swift; sourceTree = "<group>"; };
+		53CFA20C264D028800C372F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53E428B52624536F00535118 /* leakedPasswordInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leakedPasswordInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E428B82624536F00535118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E428BA2624536F00535118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		53E428BC2624536F00535118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53E428BF2624536F00535118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53E428C12624537200535118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E428C42624537200535118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53E428C62624537200535118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53E428CD2625709F00535118 /* APIPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPasswordManager.swift; sourceTree = "<group>"; };
+		53E46DC4264BEFB7004CC692 /* PasswordStorageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStorageTableView.swift; sourceTree = "<group>"; };
 		53F43337262D7A4600D935E0 /* APIBreachesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBreachesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,17 +88,19 @@
 				5330E12F26299C12009C551E /* Models */,
 				53E428B82624536F00535118 /* AppDelegate.swift */,
 				53E428CD2625709F00535118 /* APIPasswordManager.swift */,
+				53CFA20C264D028800C372F2 /* ViewController.swift */,
 				53E428BA2624536F00535118 /* SceneDelegate.swift */,
 				5330E12726297532009C551E /* NewsTableViewController.swift */,
 				53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */,
 				53440AD92637E78C00BDB2D6 /* GenerateViewController.swift */,
-				53E428BC2624536F00535118 /* ViewController.swift */,
+				53E46DC4264BEFB7004CC692 /* PasswordStorageTableView.swift */,
 				53F43337262D7A4600D935E0 /* APIBreachesManager.swift */,
 				53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */,
 				53E428BE2624536F00535118 /* Main.storyboard */,
 				53E428C12624537200535118 /* Assets.xcassets */,
 				53E428C32624537200535118 /* LaunchScreen.storyboard */,
 				53E428C62624537200535118 /* Info.plist */,
+				5358477F264BE84000934FE0 /* PasswordList.xcdatamodeld */,
 			);
 			path = leakedPasswordInterface;
 			sourceTree = "<group>";
@@ -171,11 +177,13 @@
 			files = (
 				53C37A5126314EE200F993A3 /* LeakDetailsViewController.swift in Sources */,
 				53440ADA2637E78C00BDB2D6 /* GenerateViewController.swift in Sources */,
-				53E428BD2624536F00535118 /* ViewController.swift in Sources */,
 				53440ADF2637F41A00BDB2D6 /* APIPassGenMananger.swift in Sources */,
+				53584781264BE84000934FE0 /* PasswordList.xcdatamodeld in Sources */,
+				53E46DC5264BEFB7004CC692 /* PasswordStorageTableView.swift in Sources */,
 				5330E13126299C37009C551E /* newsModel.swift in Sources */,
 				53E428B92624536F00535118 /* AppDelegate.swift in Sources */,
 				536877342637FF22006BDD4B /* newPasswordModel.swift in Sources */,
+				53CFA20D264D028800C372F2 /* ViewController.swift in Sources */,
 				53F43338262D7A4600D935E0 /* APIBreachesManager.swift in Sources */,
 				53E428BB2624536F00535118 /* SceneDelegate.swift in Sources */,
 				5330E12826297532009C551E /* NewsTableViewController.swift in Sources */,
@@ -381,6 +389,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5358477F264BE84000934FE0 /* PasswordList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				53584780264BE84000934FE0 /* PasswordList.xcdatamodel */,
+			);
+			currentVersion = 53584780264BE84000934FE0 /* PasswordList.xcdatamodel */;
+			path = PasswordList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 53E428AD2624536F00535118 /* Project object */;
 }

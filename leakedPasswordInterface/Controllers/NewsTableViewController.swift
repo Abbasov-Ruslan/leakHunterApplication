@@ -8,11 +8,13 @@
 import UIKit
 
 class NewsTableViewController: UITableViewController {
+    
     private var cellPointSize: CGFloat!
     private static let LeakCell = "LeakCell"
     var apiNewsManager = apiManager()
     var newsArray:[NewsModel] = []
     var secondArray:[NewsModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         apiNewsManager.getNews(){NewsModel in
@@ -64,15 +66,9 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
-//        return section == 0 ? newsArray.count : 1
         return section == 0 ? newsArray.count : 1
     }
-    
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return section == 0 ? "All Font Families" : "My Favorite Fonts"
-//    }
-    
+        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // The font names list
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewController.LeakCell, for: indexPath)
@@ -80,9 +76,11 @@ class NewsTableViewController: UITableViewController {
         cell.textLabel?.text = secondArray[indexPath.row].name
         cell.detailTextLabel?.text = secondArray[indexPath.row].domain
         
-        let image = secondArray[indexPath.row].image
-        let image2 = resizedImage(image: image ?? #imageLiteral(resourceName: "list"), for: CGSize(width: 60, height:30))
-        cell.imageView?.image = image2
+        var image = secondArray[indexPath.row].image
+        if image != nil {
+        image = resizedImage(image: image!, for: CGSize(width: 60, height:30))
+        cell.imageView?.image = image
+        }
         
         return cell
     }

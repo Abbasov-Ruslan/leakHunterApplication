@@ -15,6 +15,7 @@
 		536877342637FF22006BDD4B /* newPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536877332637FF22006BDD4B /* newPasswordModel.swift */; };
 		53C37A5126314EE200F993A3 /* LeakDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */; };
 		53CFA20D264D028800C372F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA20C264D028800C372F2 /* ViewController.swift */; };
+		53CFA21A264D16CD00C372F2 /* PasswordCellDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */; };
 		53E428B92624536F00535118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428B82624536F00535118 /* AppDelegate.swift */; };
 		53E428BB2624536F00535118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E428BA2624536F00535118 /* SceneDelegate.swift */; };
 		53E428C02624536F00535118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E428BE2624536F00535118 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		536877332637FF22006BDD4B /* newPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPasswordModel.swift; sourceTree = "<group>"; };
 		53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakDetailsViewController.swift; sourceTree = "<group>"; };
 		53CFA20C264D028800C372F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCellDataViewController.swift; sourceTree = "<group>"; };
 		53E428B52624536F00535118 /* leakedPasswordInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leakedPasswordInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E428B82624536F00535118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E428BA2624536F00535118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		53CFA215264D11B000C372F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				53E428CD2625709F00535118 /* APIPasswordManager.swift */,
+				53F43337262D7A4600D935E0 /* APIBreachesManager.swift */,
+				53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		53CFA216264D11D000C372F2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53CFA20C264D028800C372F2 /* ViewController.swift */,
+				5330E12726297532009C551E /* NewsTableViewController.swift */,
+				53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */,
+				53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */,
+				53440AD92637E78C00BDB2D6 /* GenerateViewController.swift */,
+				53E46DC4264BEFB7004CC692 /* PasswordStorageTableView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		53E428AC2624536F00535118 = {
 			isa = PBXGroup;
 			children = (
@@ -85,17 +110,11 @@
 		53E428B72624536F00535118 /* leakedPasswordInterface */ = {
 			isa = PBXGroup;
 			children = (
-				5330E12F26299C12009C551E /* Models */,
 				53E428B82624536F00535118 /* AppDelegate.swift */,
-				53E428CD2625709F00535118 /* APIPasswordManager.swift */,
-				53CFA20C264D028800C372F2 /* ViewController.swift */,
 				53E428BA2624536F00535118 /* SceneDelegate.swift */,
-				5330E12726297532009C551E /* NewsTableViewController.swift */,
-				53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */,
-				53440AD92637E78C00BDB2D6 /* GenerateViewController.swift */,
-				53E46DC4264BEFB7004CC692 /* PasswordStorageTableView.swift */,
-				53F43337262D7A4600D935E0 /* APIBreachesManager.swift */,
-				53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */,
+				53CFA216264D11D000C372F2 /* Controllers */,
+				53CFA215264D11B000C372F2 /* Helpers */,
+				5330E12F26299C12009C551E /* Models */,
 				53E428BE2624536F00535118 /* Main.storyboard */,
 				53E428C12624537200535118 /* Assets.xcassets */,
 				53E428C32624537200535118 /* LaunchScreen.storyboard */,
@@ -182,6 +201,7 @@
 				53E46DC5264BEFB7004CC692 /* PasswordStorageTableView.swift in Sources */,
 				5330E13126299C37009C551E /* newsModel.swift in Sources */,
 				53E428B92624536F00535118 /* AppDelegate.swift in Sources */,
+				53CFA21A264D16CD00C372F2 /* PasswordCellDataViewController.swift in Sources */,
 				536877342637FF22006BDD4B /* newPasswordModel.swift in Sources */,
 				53CFA20D264D028800C372F2 /* ViewController.swift in Sources */,
 				53F43338262D7A4600D935E0 /* APIBreachesManager.swift in Sources */,

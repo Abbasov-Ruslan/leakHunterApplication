@@ -11,10 +11,22 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
+    let notificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        notificationCenter.requestAuthorization(options: [.alert,.sound, .badge]) { (granted, error) in
+            
+            guard granted else { return }
+            self.notificationCenter.getNotificationSettings { (settings) in
+                print(settings)
+                guard settings.authorizationStatus == .authorized else { return }
+            }
+        }
+        
+        notificationCenter.delegate = self
+//        sendNotifications()
         return true
     }
 
@@ -41,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "ListHit")
+        let container = NSPersistentContainer(name: "PasswordList")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -76,6 +88,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+//    func sendNotifications() {
+//
+//        let content = UNMutableNotificationContent()
+//        content.title = "New breach"
+//        content.body = "Facebook has been leaked"
+//        content.sound = UNNotificationSound.default
+//
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//
+//        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+//        notificationCenter.add(request) { (error) in
+//            print(error?.localizedDescription ?? "Error")
+//        }
+//    }
+    
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        completionHandler([.alert, .sound])
+        print(#function)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print(#function)
+    }
+    
+}

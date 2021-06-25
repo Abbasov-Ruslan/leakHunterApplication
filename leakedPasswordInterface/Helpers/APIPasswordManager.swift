@@ -80,8 +80,6 @@ class APIPasswordManager {
             completionHandler(result)
         }
     }
-    
-    
 }
 
 extension String {

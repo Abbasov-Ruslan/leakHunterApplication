@@ -444,6 +444,17 @@
                                 <color key="textColor" red="0.98812824489999995" green="0.98829704519999995" blue="0.98811751599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3L-j0-npd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="39x-07-kY8"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kuw-Ip-kOI"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -486,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJM-DV-7QF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2863.768115942029" y="-59.598214285714285"/>
+            <point key="canvasLocation" x="-2818" y="-46"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pEX-95-okJ">
@@ -502,19 +513,19 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="jmY-uZ-uuc"/>
                         <segue destination="bS3-LA-0t1" kind="relationship" relationship="viewControllers" id="2Qb-8O-mEs"/>
-                        <segue destination="Snr-ij-Jt2" kind="relationship" relationship="viewControllers" id="1TX-iV-DF6"/>
                         <segue destination="ndc-6V-D0X" kind="relationship" relationship="viewControllers" id="N7z-Qh-prB"/>
+                        <segue destination="Snr-ij-Jt2" kind="relationship" relationship="viewControllers" id="1TX-iV-DF6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8A-Uy-ZSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1842" y="-81"/>
         </scene>
-        <!--Item-->
+        <!--password storage-->
         <scene sceneID="DYr-nf-nkR">
             <objects>
                 <navigationController id="ndc-6V-D0X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="externaldrive" catalog="system" selectedImage="externaldrive" id="IH4-yx-9YJ"/>
+                    <tabBarItem key="tabBarItem" title="password storage" image="externaldrive" catalog="system" selectedImage="externaldrive" id="IH4-yx-9YJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MyB-Y0-kdD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -525,7 +536,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkI-De-ggL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-942" y="-81"/>
+            <point key="canvasLocation" x="-1012" y="-307"/>
         </scene>
         <!--Password Storage Table View Controller-->
         <scene sceneID="eWR-Ci-CAC">
@@ -539,7 +550,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="UI5-tW-6uU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="UI5-tW-6uU">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UI5-tW-6uU" id="EUu-Il-VSn">
@@ -550,6 +561,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="rpH-di-6sY" id="irN-Bq-SuP"/>
+                                    <outlet property="delegate" destination="rpH-di-6sY" id="06N-Zq-Gnq"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -565,7 +577,7 @@
                     <navigationItem key="navigationItem" id="t0k-fy-1m5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uKd-6m-wLx">
                             <connections>
-                                <segue destination="nak-PB-14S" kind="show" id="j35-aY-HBq"/>
+                                <segue destination="nak-PB-14S" kind="show" identifier="cellData" id="j35-aY-HBq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -577,10 +589,10 @@
             </objects>
             <point key="canvasLocation" x="-100.00000000000001" y="-81.026785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Password Cell Data View Controller-->
         <scene sceneID="Erj-8c-F8v">
             <objects>
-                <viewController id="nak-PB-14S" sceneMemberID="viewController">
+                <viewController id="nak-PB-14S" customClass="PasswordCellDataViewController" customModule="leakedPasswordInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rL2-Wv-YzJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -618,6 +630,9 @@
                                 <state key="normal" title="save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonTouched:" destination="nak-PB-14S" eventType="touchUpInside" id="1h2-aa-uVB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-r2-Ike">
                                 <rect key="frame" x="20" y="96" width="30" height="21"/>
@@ -679,10 +694,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YbT-Og-iri"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="A0F-Np-wxf" id="TMP-z7-qcP"/>
+                        <outlet property="passwordTextField" destination="mWh-hp-v49" id="0jG-fy-HaV"/>
+                        <outlet property="siteTextField" destination="jRf-TH-UJO" id="u3B-77-CMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyT-C5-Lfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685.60000000000002" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="940" y="-120"/>
         </scene>
         <!--password check-->
         <scene sceneID="tne-QT-ifu">
@@ -704,15 +724,7 @@
                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Flow leak" id="wV6-9L-vKs">
-                                        <barButtonItem key="rightBarButtonItem" id="qnM-UK-stA">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NEK-JC-noS">
-                                                <rect key="frame" x="231" y="0.0" width="128" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="info" catalog="system"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Flow leak" id="wV6-9L-vKs"/>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLe-uD-z9S">
@@ -771,7 +783,6 @@
     </scenes>
     <resources>
         <image name="externaldrive" catalog="system" width="128" height="88"/>
-        <image name="info" catalog="system" width="93" height="128"/>
         <image name="key" catalog="system" width="86" height="128"/>
         <image name="key.fill" catalog="system" width="83" height="128"/>
         <image name="list" width="17.333333969116211" height="17.333333969116211"/>

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol JSONDecodable {
+protocol JSONDecodableNews {
     init?(JSON: NSDictionary)
 }
 
@@ -30,10 +30,9 @@ struct NewsModel {
     let logoPath: String
     let modifiedDate:String
     var image: UIImage?
-//    var sortDate: Date?
 }
 //
-extension NewsModel: JSONDecodable {
+extension NewsModel: JSONDecodableNews {
     init?(JSON: NSDictionary) {
         guard let isSensetive = JSON["IsSensitive"] as? Bool,
               let modifiedDate = JSON["ModifiedDate"] as? String,

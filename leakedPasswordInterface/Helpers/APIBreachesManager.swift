@@ -26,7 +26,6 @@ class apiManager {
                     let model = NewsModel(JSON: item as! NSDictionary)
                     arr2.append(model!)
                 }
-                
                 completionHandler(arr2)
             } catch let error as NSError {
                 print(error)

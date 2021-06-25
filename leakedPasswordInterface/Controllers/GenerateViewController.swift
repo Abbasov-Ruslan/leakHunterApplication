@@ -46,7 +46,6 @@ class GenerateViewController: UIViewController {
     @IBAction func sliderValuerChanged(_ sender: Any) {
         lengthOfPasswordNumber.text = String(Int(lengthOfPasswordSlider.value))
     }
-    
     @IBAction func generateNewPasswordPressed(_ sender: Any) {
         let length = Int(lengthOfPasswordNumber.text ?? "0")
         generator.generatePassword(length: length!, num: isNums, symbols: isSymbols, upper: isCapitalised) { (generatedPassword) in
@@ -55,13 +54,10 @@ class GenerateViewController: UIViewController {
             }
         }
     }
-    
-    
     @IBAction func symbolsCheckboxPressed(_ sender: Any) {
         changeCheckboxImage(flag: isSymbols, checkbox: symbolsCheckbox)
         isSymbols = isSymbols ? false : true
     }
-    
     @IBAction func capitalisedCheckBoxPressed(_ sender: Any) {
         changeCheckboxImage(flag: isCapitalised, checkbox: capitilisedCheckBox)
         isCapitalised = isCapitalised ? false : true
@@ -70,8 +66,6 @@ class GenerateViewController: UIViewController {
         changeCheckboxImage(flag: isNums, checkbox: numsCheckBox)
         isNums = isNums ? false : true
     }
-    
-    
 }
 
 extension GenerateViewController {

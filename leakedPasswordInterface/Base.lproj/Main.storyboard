@@ -497,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJM-DV-7QF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2818" y="-46"/>
+            <point key="canvasLocation" x="-2526" y="-81"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pEX-95-okJ">
@@ -519,7 +519,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8A-Uy-ZSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1842" y="-81"/>
+            <point key="canvasLocation" x="-1746" y="-81"/>
         </scene>
         <!--password storage-->
         <scene sceneID="DYr-nf-nkR">
@@ -536,7 +536,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkI-De-ggL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1012" y="-307"/>
+            <point key="canvasLocation" x="-1007" y="-81"/>
         </scene>
         <!--Password Storage Table View Controller-->
         <scene sceneID="eWR-Ci-CAC">
@@ -702,7 +702,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyT-C5-Lfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="-120"/>
+            <point key="canvasLocation" x="721" y="-81"/>
         </scene>
         <!--password check-->
         <scene sceneID="tne-QT-ifu">
@@ -778,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3716" y="-59"/>
+            <point key="canvasLocation" x="-3358" y="-81"/>
         </scene>
     </scenes>
     <resources>

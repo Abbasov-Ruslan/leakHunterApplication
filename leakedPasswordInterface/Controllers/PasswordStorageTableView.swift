@@ -86,13 +86,19 @@ extension PasswordStorageTableViewController: UITableViewDataSource {
         performSegue(withIdentifier: "cellData", sender: nil)
     }
     
+    func deleteRow() {
+        self.tableView.deleteRows(at: [[locIndexPath]], with: .automatic)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if !accounts.isEmpty {
         let cellVC = segue.destination as! PasswordCellDataViewController
         let account = accounts[locIndexPath]
-        cellVC.loadedPassword = account.value(forKey: "password") as! String
-        cellVC.loadedLogin = account.value(forKey: "login") as! String
-        cellVC.loadedSite = account.value(forKey: "site") as! String
+        cellVC.loadedPassword = account.value(forKey: "password") as? String ?? "Error"
+        cellVC.loadedLogin = account.value(forKey: "login") as? String ?? "Error"
+        cellVC.loadedSite = account.value(forKey: "site") as? String ?? "Error"
+        cellVC.accountsArray = accounts
+            cellVC.numberOfCell = locIndexPath
         }
     }
     

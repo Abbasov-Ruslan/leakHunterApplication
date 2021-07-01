@@ -19,6 +19,8 @@ class PasswordCellDataViewController: UIViewController {
     var loadedLogin = ""
     var loadedSite = ""
     
+    var accountsArray:[NSManagedObject] = []
+    var  numberOfCell: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,4 +66,26 @@ class PasswordCellDataViewController: UIViewController {
     }
     
     
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Account", in: managedContext)!
+        let account = NSManagedObject(entity: entity, insertInto: managedContext)
+            let elementToRemove = accountsArray[numberOfCell]
+            managedContext.delete(elementToRemove)
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tableVC = segue.destination as! PasswordStorageTableViewController
+        tableVC.deleteRow()
+    }
 }

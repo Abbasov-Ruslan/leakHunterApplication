@@ -72,8 +72,6 @@ class PasswordCellDataViewController: UIViewController {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Account", in: managedContext)!
-        let account = NSManagedObject(entity: entity, insertInto: managedContext)
             let elementToRemove = accountsArray[numberOfCell]
             managedContext.delete(elementToRemove)
         do {

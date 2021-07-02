@@ -29,10 +29,8 @@ class ViewController: UIViewController {
     @IBAction func searchButtonPressed(_ sender: Any) {
         
         let password = searchPasswordTextField.text ?? ""
-        var response = ""
         
         apiPasswordManger.passwordRequest(password: password){ [weak self] (string) in
-            response = string
             DispatchQueue.main.async {
                 self?.showAlert(response: string)
             }

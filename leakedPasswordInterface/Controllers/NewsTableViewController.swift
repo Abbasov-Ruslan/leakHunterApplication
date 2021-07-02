@@ -27,11 +27,11 @@ class NewsTableViewController: UITableViewController {
                 }
                 numberOfElement+=1
                 DispatchQueue.main.async {
-                self.tableView.reloadData()
+                    self.tableView.reloadData()
                 }
             }
             DispatchQueue.main.async {
-            self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
@@ -72,8 +72,8 @@ class NewsTableViewController: UITableViewController {
         cell.detailTextLabel?.text = secondArray[indexPath.row].domain
         var image = secondArray[indexPath.row].image
         if image != nil {
-        image = resizedImage(image: image!, for: CGSize(width: 60, height: 30))
-        cell.imageView?.image = image
+            image = resizedImage(image: image!, for: CGSize(width: 60, height: 30))
+            cell.imageView?.image = image
         }
         return cell
     }

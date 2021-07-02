@@ -24,21 +24,21 @@ class LeakDetailsViewController: UIViewController {
     @IBOutlet weak var leakDescriptionTextView: UITextView!
 
     var leakDetails: NewsModel = NewsModel(name: "",
-                                          title: "",
-                                          domain: "",
-                                          breachDate: "",
-                                          pwnCount: 0,
-                                          description: "",
-                                          dataClasses: [],
-                                          isVerified: false,
-                                          isFabricated: false,
-                                          isSensitive: false,
-                                          isRetired: false,
-                                          isSpamList: false,
-                                          addedDate: "",
-                                          logoPath: "",
-                                          modifiedDate: "",
-                                          image: UIImage(systemName: "key"))
+                                           title: "",
+                                           domain: "",
+                                           breachDate: "",
+                                           pwnCount: 0,
+                                           description: "",
+                                           dataClasses: [],
+                                           isVerified: false,
+                                           isFabricated: false,
+                                           isSensitive: false,
+                                           isRetired: false,
+                                           isSpamList: false,
+                                           addedDate: "",
+                                           logoPath: "",
+                                           modifiedDate: "",
+                                           image: UIImage(systemName: "key"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class LeakDetailsViewController: UIViewController {
         var str = leakDetails.modifiedDate
         var str2 = leakDetails.addedDate
         if let dotRange = str.range(of: "T") {
-          str.removeSubrange(dotRange.lowerBound..<str.endIndex)
+            str.removeSubrange(dotRange.lowerBound..<str.endIndex)
         }
         if let dotRange = str2.range(of: "T") {
             str2.removeSubrange(dotRange.lowerBound..<str2.endIndex)

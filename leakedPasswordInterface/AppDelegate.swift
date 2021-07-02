@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         notificationCenter.delegate = self
-//        sendNotifications()
+        //        sendNotifications()
         return true
     }
 
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
-        */
+         */
         let container = NSPersistentContainer(name: "PasswordList")
         container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
@@ -95,20 +95,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-//    func sendNotifications() {
-//
-//        let content = UNMutableNotificationContent()
-//        content.title = "New breach"
-//        content.body = "Facebook has been leaked"
-//        content.sound = UNNotificationSound.default
-//
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-//
-//        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
-//        notificationCenter.add(request) { (error) in
-//            print(error?.localizedDescription ?? "Error")
-//        }
-//    }
+    //    func sendNotifications() {
+    //
+    //        let content = UNMutableNotificationContent()
+    //        content.title = "New breach"
+    //        content.body = "Facebook has been leaked"
+    //        content.sound = UNNotificationSound.default
+    //
+    //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    //
+    //        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+    //        notificationCenter.add(request) { (error) in
+    //            print(error?.localizedDescription ?? "Error")
+    //        }
+    //    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
@@ -116,7 +116,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping
                                     (UNNotificationPresentationOptions) -> Void) {
-//        completionHandler([.alert, .sound])
+        //        completionHandler([.alert, .sound])
         print(#function)
     }
 

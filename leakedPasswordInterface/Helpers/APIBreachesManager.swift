@@ -16,7 +16,7 @@ class ApiManager {
         let task = URLSession.shared.dataTask(with: url) {(data, _, error) in
             guard let data = data else { return }
             do {
-            let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSArray
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSArray
                 var newsArray: [NewsModel] = []
 
                 for item in json! {
@@ -26,7 +26,7 @@ class ApiManager {
                 completionHandler(newsArray)
             } catch let error as NSError {
                 print(error)
-              }
+            }
         }
         task.resume()
     }

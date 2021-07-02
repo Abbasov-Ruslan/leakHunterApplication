@@ -24,18 +24,7 @@ class GenerateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        generateButton.titleLabel?.minimumScaleFactor = 0.5
-        generateButton.titleLabel?.numberOfLines = 1
-        generateButton.titleLabel?.adjustsFontSizeToFitWidth = true
-
-        generateButton.layer.cornerRadius = 10
-        generateButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
-        passwordTextField.layer.cornerRadius = 10.0
-        passwordTextField.layer.borderColor = UIColor.black.cgColor
-        passwordTextField.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-
+        setupInterface()
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -45,6 +34,7 @@ class GenerateViewController: UIViewController {
     @IBAction func sliderValuerChanged(_ sender: Any) {
         lengthOfPasswordNumber.text = String(Int(lengthOfPasswordSlider.value))
     }
+
     @IBAction func generateNewPasswordPressed(_ sender: Any) {
         let length = Int(lengthOfPasswordNumber.text ?? "0")
         generator.generatePassword(length: length!,
@@ -56,17 +46,33 @@ class GenerateViewController: UIViewController {
             }
         }
     }
+
     @IBAction func symbolsCheckboxPressed(_ sender: Any) {
         changeCheckboxImage(flag: isSymbols, checkbox: symbolsCheckbox)
         isSymbols = isSymbols ? false : true
     }
+
     @IBAction func capitalisedCheckBoxPressed(_ sender: Any) {
         changeCheckboxImage(flag: isCapitalised, checkbox: capitilisedCheckBox)
         isCapitalised = isCapitalised ? false : true
     }
+
     @IBAction func numsCheckboxPressed(_ sender: Any) {
         changeCheckboxImage(flag: isNums, checkbox: numsCheckBox)
         isNums = isNums ? false : true
+    }
+
+    func setupInterface() {
+        generateButton.titleLabel?.minimumScaleFactor = 0.5
+        generateButton.titleLabel?.numberOfLines = 1
+        generateButton.titleLabel?.adjustsFontSizeToFitWidth = true
+
+        generateButton.layer.cornerRadius = 10
+        generateButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+
+        passwordTextField.layer.cornerRadius = 10.0
+        passwordTextField.layer.borderColor = UIColor.black.cgColor
+        passwordTextField.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
     }
 }
 

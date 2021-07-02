@@ -67,6 +67,6 @@ extension NewsModel: JSONDecodableNews {
         self.isSpamList = isSpamList
         self.logoPath = logoPath
         self.image = nil
-//        self.sortDate = nil
+        //        self.sortDate = nil
     }
 }

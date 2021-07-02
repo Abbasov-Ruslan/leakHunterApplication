@@ -68,8 +68,8 @@ class PasswordCellDataViewController: UIViewController {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-            let elementToRemove = accountsArray[numberOfCell]
-            managedContext.delete(elementToRemove)
+        let elementToRemove = accountsArray[numberOfCell]
+        managedContext.delete(elementToRemove)
         do {
             try managedContext.save()
         } catch let error as NSError {

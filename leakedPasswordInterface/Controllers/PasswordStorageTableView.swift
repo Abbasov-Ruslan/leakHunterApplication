@@ -87,8 +87,8 @@ extension PasswordStorageTableViewController: UITableViewDataSource {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if !accounts.isEmpty {
-        let cellVC = segue.destination as? PasswordCellDataViewController
-        let account = accounts[locIndexPath]
+            let cellVC = segue.destination as? PasswordCellDataViewController
+            let account = accounts[locIndexPath]
             cellVC?.loadedPassword = account.value(forKey: "password") as? String ?? "Error"
             cellVC?.loadedLogin = account.value(forKey: "login") as? String ?? "Error"
             cellVC?.loadedSite = account.value(forKey: "site") as? String ?? "Error"

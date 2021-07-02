@@ -5,7 +5,6 @@
 //  Created by Ruslan Abbasov on 16.04.2021.
 //
 
-
 import Foundation
 import UIKit
 
@@ -20,7 +19,7 @@ struct NewsModel {
     let breachDate: String
     let pwnCount: Int
     let description: String
-    let dataClasses: Array<String>
+    let dataClasses: [String]
     let isVerified: Bool
     let isFabricated: Bool
     let isSensitive: Bool
@@ -28,7 +27,7 @@ struct NewsModel {
     let isSpamList: Bool
     var addedDate: String
     let logoPath: String
-    let modifiedDate:String
+    let modifiedDate: String
     var image: UIImage?
 }
 //
@@ -45,13 +44,13 @@ extension NewsModel: JSONDecodableNews {
               let isVerified = JSON["IsVerified"] as? Bool,
               let isRetired = JSON["IsRetired"] as? Bool,
               let title = JSON["Title"] as? String,
-              let dataClasses = JSON["DataClasses"] as? Array<String>,
+              let dataClasses = JSON["DataClasses"] as? [String],
               let addedDate = JSON["AddedDate"] as? String,
               let isSpamList = JSON["IsSpamList"] as? Bool,
               let logoPath = JSON["LogoPath"] as? String else {
             return nil
         }
-        
+
         self.isSensitive = isSensetive
         self.modifiedDate = modifiedDate
         self.domain = domain
@@ -71,6 +70,3 @@ extension NewsModel: JSONDecodableNews {
 //        self.sortDate = nil
     }
 }
-
-
-

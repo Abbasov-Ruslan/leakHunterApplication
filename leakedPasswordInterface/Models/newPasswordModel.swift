@@ -8,17 +8,17 @@
 import Foundation
 
 protocol JSONDecodablePassword {
-    init?(JSON: [String : AnyObject])
+    init?(JSON: [String: AnyObject])
 }
 
-struct newPasswordModel {
-    
+struct NewPasswordModel {
+
     let success: Bool
     let password: [String]
 }
 
-extension newPasswordModel: JSONDecodablePassword {
-    init?(JSON: [String : AnyObject]) {
+extension NewPasswordModel: JSONDecodablePassword {
+    init?(JSON: [String: AnyObject]) {
         guard let success = JSON["success"] as? Bool,
               let password = JSON["passwords"] as? [String]
         else {

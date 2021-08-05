@@ -17,6 +17,7 @@
 		5373F3B626BC1CA7006057B8 /* screenshot_1 — копия 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B226BC1CA7006057B8 /* screenshot_1 — копия 4.png */; };
 		5373F3B726BC1CA7006057B8 /* screenshot_1 — копия.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B326BC1CA7006057B8 /* screenshot_1 — копия.png */; };
 		5373F3B826BC1CA7006057B8 /* screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B426BC1CA7006057B8 /* screenshot_1.png */; };
+		5373F3BB26BC241C006057B8 /* ic_launcher-web.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3BA26BC241C006057B8 /* ic_launcher-web.png */; };
 		53C37A5126314EE200F993A3 /* LeakDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */; };
 		53CFA20D264D028800C372F2 /* PasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA20C264D028800C372F2 /* PasswordCheckViewController.swift */; };
 		53CFA21A264D16CD00C372F2 /* PasswordCellDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */; };
@@ -41,6 +42,7 @@
 		5373F3B226BC1CA7006057B8 /* screenshot_1 — копия 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot_1 — копия 4.png"; sourceTree = "<group>"; };
 		5373F3B326BC1CA7006057B8 /* screenshot_1 — копия.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot_1 — копия.png"; sourceTree = "<group>"; };
 		5373F3B426BC1CA7006057B8 /* screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_1.png; sourceTree = "<group>"; };
+		5373F3BA26BC241C006057B8 /* ic_launcher-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher-web.png"; sourceTree = "<group>"; };
 		53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakDetailsViewController.swift; sourceTree = "<group>"; };
 		53CFA20C264D028800C372F2 /* PasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckViewController.swift; sourceTree = "<group>"; };
 		53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCellDataViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				5373F3B226BC1CA7006057B8 /* screenshot_1 — копия 4.png */,
 				5373F3B326BC1CA7006057B8 /* screenshot_1 — копия.png */,
 				5373F3B426BC1CA7006057B8 /* screenshot_1.png */,
+				5373F3BA26BC241C006057B8 /* ic_launcher-web.png */,
 			);
 			name = github;
 			path = ../../Desktop/github;
@@ -209,6 +212,7 @@
 				53E428C22624537200535118 /* Assets.xcassets in Resources */,
 				5373F3B826BC1CA7006057B8 /* screenshot_1.png in Resources */,
 				53E428C02624536F00535118 /* Main.storyboard in Resources */,
+				5373F3BB26BC241C006057B8 /* ic_launcher-web.png in Resources */,
 				5373F3B526BC1CA7006057B8 /* screenshot_1 — копия 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

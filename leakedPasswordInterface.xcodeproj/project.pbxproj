@@ -13,6 +13,10 @@
 		53440ADF2637F41A00BDB2D6 /* APIPassGenMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */; };
 		53584781264BE84000934FE0 /* PasswordList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5358477F264BE84000934FE0 /* PasswordList.xcdatamodeld */; };
 		536877342637FF22006BDD4B /* newPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536877332637FF22006BDD4B /* newPasswordModel.swift */; };
+		5373F3B526BC1CA7006057B8 /* screenshot_1 — копия 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B126BC1CA7006057B8 /* screenshot_1 — копия 2.png */; };
+		5373F3B626BC1CA7006057B8 /* screenshot_1 — копия 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B226BC1CA7006057B8 /* screenshot_1 — копия 4.png */; };
+		5373F3B726BC1CA7006057B8 /* screenshot_1 — копия.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B326BC1CA7006057B8 /* screenshot_1 — копия.png */; };
+		5373F3B826BC1CA7006057B8 /* screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5373F3B426BC1CA7006057B8 /* screenshot_1.png */; };
 		53C37A5126314EE200F993A3 /* LeakDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */; };
 		53CFA20D264D028800C372F2 /* PasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA20C264D028800C372F2 /* PasswordCheckViewController.swift */; };
 		53CFA21A264D16CD00C372F2 /* PasswordCellDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */; };
@@ -33,6 +37,10 @@
 		53440ADE2637F41A00BDB2D6 /* APIPassGenMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPassGenMananger.swift; sourceTree = "<group>"; };
 		53584780264BE84000934FE0 /* PasswordList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PasswordList.xcdatamodel; sourceTree = "<group>"; };
 		536877332637FF22006BDD4B /* newPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPasswordModel.swift; sourceTree = "<group>"; };
+		5373F3B126BC1CA7006057B8 /* screenshot_1 — копия 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot_1 — копия 2.png"; sourceTree = "<group>"; };
+		5373F3B226BC1CA7006057B8 /* screenshot_1 — копия 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot_1 — копия 4.png"; sourceTree = "<group>"; };
+		5373F3B326BC1CA7006057B8 /* screenshot_1 — копия.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot_1 — копия.png"; sourceTree = "<group>"; };
+		5373F3B426BC1CA7006057B8 /* screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_1.png; sourceTree = "<group>"; };
 		53C37A5026314EE200F993A3 /* LeakDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakDetailsViewController.swift; sourceTree = "<group>"; };
 		53CFA20C264D028800C372F2 /* PasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckViewController.swift; sourceTree = "<group>"; };
 		53CFA219264D16CD00C372F2 /* PasswordCellDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCellDataViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +76,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5373F3B026BC1CA7006057B8 /* github */ = {
+			isa = PBXGroup;
+			children = (
+				5373F3B126BC1CA7006057B8 /* screenshot_1 — копия 2.png */,
+				5373F3B226BC1CA7006057B8 /* screenshot_1 — копия 4.png */,
+				5373F3B326BC1CA7006057B8 /* screenshot_1 — копия.png */,
+				5373F3B426BC1CA7006057B8 /* screenshot_1.png */,
+			);
+			name = github;
+			path = ../../Desktop/github;
+			sourceTree = "<group>";
+		};
 		53CFA215264D11B000C372F2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +114,7 @@
 		53E428AC2624536F00535118 = {
 			isa = PBXGroup;
 			children = (
+				5373F3B026BC1CA7006057B8 /* github */,
 				53E428B72624536F00535118 /* leakedPasswordInterface */,
 				53E428B62624536F00535118 /* Products */,
 			);
@@ -182,9 +203,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5373F3B626BC1CA7006057B8 /* screenshot_1 — копия 4.png in Resources */,
+				5373F3B726BC1CA7006057B8 /* screenshot_1 — копия.png in Resources */,
 				53E428C52624537200535118 /* LaunchScreen.storyboard in Resources */,
 				53E428C22624537200535118 /* Assets.xcassets in Resources */,
+				5373F3B826BC1CA7006057B8 /* screenshot_1.png in Resources */,
 				53E428C02624536F00535118 /* Main.storyboard in Resources */,
+				5373F3B526BC1CA7006057B8 /* screenshot_1 — копия 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

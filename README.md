@@ -1,5 +1,5 @@
 
-# LeakHunter   <img src=".https://github.com/Abbasov-Ruslan/leakHunterApplication/blob/main/github/ic_launcher-web.png" alt="appIcon" width="100">
+# LeakHunter   <img src="https://github.com/Abbasov-Ruslan/leakHunterApplication/blob/main/github/ic_launcher-web.png" alt="appIcon" width="100">
 
 
 [![Platform](https://img.shields.io/badge/platform-iOS-yellow.svg)]()
@@ -28,12 +28,12 @@
   
 
 ## Features
-
+<p float="left">
 <img src="https://github.com/Abbasov-Ruslan/leakHunterApplication/blob/main/github/screenshot_1%C2%A0—%20копия%204.png" alt="conversations" width="250">
 <img src="https://github.com/Abbasov-Ruslan/leakHunterApplication/blob/main/github/screenshot_1%C2%A0—%20копия.png" alt="conversations" width="250">
 <img src="https://github.com/Abbasov-Ruslan/leakHunterApplication/blob/main/github/screenshot_1%C2%A0—%20копия%202.png" alt="conversations" width="250">
 <img src="https://github.com/Abbasov-Ruslan/leakHunterApplication/blob/main/github/screenshot_1.png" width="250">
-
+</p>
 
   
 
